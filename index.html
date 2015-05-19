@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Web To Case</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <style type="text/css">
+  #logo {
+    background: transparent url(http://www.honda.mx/honda2012/application/public/images/gral/sprite_gral.png) no-repeat scroll 0px 0px;
+    cursor: pointer;
+    display: block;
+    height: 33px;
+    left: 50%;
+    margin-left: -80px;
+    margin-bottom: 0px;
+    position: relative;
+    width: 161px;
+  }
+  .header {
+    padding: 10px;
+  }
+  #container {
+    background: transparent url(http://www.honda.mx/honda2012/application/public/images/corporativo/back-menu-header.jpg) repeat-x;
+    min-height: 53px;
+  }
+  </style>
+  <div class="container" style="width: 50%;">
+    <div class="row">
+      <div class="header">
+        <a id="logo" class="hidden_movil" href="http://www.honda.mx/home" target="_parent"></a>
+      </div>
+    </div>
+    <div class="row" id="container">
+      <div style="display: table; height: 29px;margin: 8px;">
+       <div style="display: table-cell; vertical-align: middle;">
+         <b>Atención Al Cliente</b>
+       </div>
+     </div>
+    </div>
+    <div class="row">
+      <form role="form" action="https://crmshonda--Full.cs21.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+        <input type=hidden name="orgid" value="00Dq0000000AjcF">
+        <input type=hidden name="retURL" value="http://www.honda.mx/corporativo">
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label for="00Nq0000000Xfkb">ÁREA HDM:</label>
+            <select id="00Nq0000000Xfkb" name="00Nq0000000Xfkb" title="ÁREA HDM" class="form-control" >
+              <option value="">--Ninguno--</option>
+              <option value="Acura">Acura</option>
+              <option value="Honda">Honda</option>
+              <option value="Motorcycle">Motorcycle</option>
+              <option value="Power Equipment">Power Equipment</option>
+            </select>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="name">Nombre del contacto:</label>
+            <input class="form-control" id="name" maxlength="80" name="name" size="20" type="text" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label for="email">Correo electrónico:</label>
+            <input class="form-control" id="email" maxlength="80" name="email" size="20" type="text" />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="00Nq0000000XsAG">State:</label>
+            <input class="form-control" id="00Nq0000000XsAG" maxlength="30" name="00Nq0000000XsAG" size="20" type="text" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label for="00Nq0000000XsAa">Zipcode:</label>
+            <input class="form-control" id="00Nq0000000XsAa" maxlength="10" name="00Nq0000000XsAa" size="20" type="text" />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="00Nq0000000XsAB">City:</label>
+            <input class="form-control" id="00Nq0000000XsAB" maxlength="50" name="00Nq0000000XsAB" size="20" type="text" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label for="00Nq0000000XsAk">TELEFONO:</label>
+            <input class="form-control" id="00Nq0000000XsAk" maxlength="30" name="00Nq0000000XsAk" size="20" type="text" />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="subject">Asunto:</label>
+            <input class="form-control" id="subject" maxlength="80" name="subject" size="20" type="text" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label for="description">Descripción:</label>
+            <textarea class="form-control" name="description"></textarea>
+          </div>
+          <div class="form-group col-md-6" style="margin-top: 25px;">
+            <input type="hidden"  id="external" name="external" value="1" />
+            <button type="submit" class="btn btn-default">Submit</button>
+          </div>
+        </div>
+      </form>
+      <div class="clearfix visible-xs-block"></div>
+    </div>
+  </div>
+</body>
+</html>
